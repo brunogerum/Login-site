@@ -1,0 +1,179 @@
+@charset "UTF-8";
+
+/* Paleta de Cores
+verde: #49a09d
+lilas: #5f2c82
+*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+
+html, body{
+    background-image: linear-gradient(to top, #49a09d, #602c82b2);
+    height: 100vh;
+}
+
+main{
+    
+    background-color: white;
+    width: 250px;
+    height: 500px;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.459);
+    transition: width 0.3s, height 0.3s;
+    transition-timing-function: ease;
+    transform: translate(-50%, -50%);
+}
+
+#imagem {
+    background: #602c82b2 url(imagem/pexels-athena-2582937.jpg) no-repeat center center;
+    background-size: cover;
+    height: 200px;
+    display: block;
+        
+}
+h1 {
+    margin-bottom: 10px;
+    }
+
+p { 
+    font-size: 0.8em;
+    }
+
+.campo {
+    margin: auto;
+    background-color:  #73369be3;
+    display: block;
+    width: 90%;
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 5px;
+    }
+
+.campo > label {
+        display: none;
+    }
+
+span {
+    color: white;
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+    }
+
+    input::placeholder {
+        color: #000000;
+    }
+
+
+.campo > input {
+    background-color: rgb(132, 211, 187);
+    font-size: 1em;
+    width: calc(100% - 48px);
+    height: 80%;
+    border:  0px;
+    border-radius: 5px;
+    padding: 4px;
+    transform: translateY(-3.5px);
+    }
+
+.campo > input:focus-within {
+    background-color: white;
+    outline: none;
+    }
+
+input[type=submit] {
+    margin: auto;
+    font-size: 1em;
+    display: block;
+    width: 90%;
+    height: 40px;
+    background-color: #49a09d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    
+}
+
+input[type=submit]:hover{
+    background-color: #357573;
+    font-weight: bold;
+}
+
+input[type=button] {
+    margin: auto;
+    border: none;
+    font-size: 1em;
+    display: block;
+    width: 90%;
+    height: 40px;
+    background-color: #d1d8d8;
+    color: rgb(27, 70, 59);
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: 1px solid #1c615f;
+
+    
+}
+
+input[type=button]:hover{
+    background-color: #265a5854;
+    font-weight: bold;
+}
+
+@media screen and (min-width:768px) and (max-width: 992px){
+    
+    main{
+        width: 80vw;
+        height: 300px;
+        
+    }
+    #imagem {
+        float: left;
+        width: 30%;
+        height: 100%;
+            
+    }
+    
+    #formulario{
+        float: right;
+        width: 70%;
+        
+    }
+}
+
+@media screen and (min-width:992px) {
+    
+    main{
+        width: 95vw;
+        height: 350px;
+        max-width: 1200px;
+        
+    }
+    #imagem {
+        float: right;
+        width: 50%;
+        height: 100%;
+            
+    }
+    
+    #formulario{
+        float: left;
+        width: 50%;
+    }
+
+}
